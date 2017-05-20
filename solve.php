@@ -6,7 +6,6 @@ Description:
 	Class TS is a calculator for the common "Travel Man" base on Nearest Neighbor Algorithm (O(n2)).
 
 Date: 		2017-05-20
-
 */
 
 class TS {
@@ -17,7 +16,7 @@ class TS {
     public $cost = null;                // the distance route
     private $infinity = 10000;          // define the Infinity number
 
-	/**
+    /**
      * Add a location
      *
      * @param int $i The position of city
@@ -35,7 +34,7 @@ class TS {
      *
      * @param File $file_name A cities text
      */
-    public function store_matrix($file_name)
+    public function storeMatrix($file_name)
     {
         if ($file = fopen($file_name, "r")) {
             $i = 1;
@@ -56,7 +55,7 @@ class TS {
     /**
      * Init the cost matrix moves between cities
      */
-    public function init_matrix()
+    public function initMatrix()
     {
         $num_locations = count($this->locations);
         for ($i = 1; $i <= $num_locations; $i++) {
@@ -73,7 +72,7 @@ class TS {
     /**
      * Show the all cities which have visited
      */
-    public function print_route()
+    public function printRoute()
     {
         foreach (end($this->visited) as $visit) {
             print $this->locations[$visit]['name'] . '<br />' ;
@@ -153,13 +152,13 @@ class TS {
 $ts = new TS;
 
 // open file cities.txt and stored information of file into array
-$ts->store_matrix('cities.txt');
+$ts->storeMatrix('cities.txt');
 // init the cost matrix moves between cities.
-$ts->init_matrix();
+$ts->initMatrix();
 // calculator to find shortest route base on Nearest neighbor algorithm and begin with Beijing (=1) city .
 $ts->compute(count($ts->locations), 1 ,$ts->cost_matrix);
 // print the result shortest distance and shortest route
 print '<strong>Shortest Distance</strong>: ' . $ts->cost;
 print '<br /><strong>Shortest Route</strong>: <br />';
-$ts->print_route();
+$ts->printRoute();
 ?>
