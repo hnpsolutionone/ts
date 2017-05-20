@@ -10,3 +10,8 @@ Class TS is a calculator for the common "Travel SaleMan" base on Nearest Neighbo
 - You naviagtion to your folder which include the code in your command prompt
 - Run command line: "phpunit unit_test.php"
 
+3. Performance testing with Gatling tool
+
+- I have run 10 requests to 50 requests. The results performance very good (under 1s/request). You can open two files below and review them:
++ \results\Performance Testing with Gatling\10 requests in duration 22 seconds\index.html
++ \results\Performance Testing with Gatling\50 requests in duration 102 seconds\index.html
