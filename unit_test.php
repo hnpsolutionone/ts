@@ -7,7 +7,7 @@ require_once 'solve.php';
 class TSTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * @covers TSP::NNA
+     * @covers TSP::compute
      * @todo   Implement testTS().
      */
     public function testTS() {
