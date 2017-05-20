@@ -29,7 +29,12 @@ class TS {
             while(!feof($file)) {
                 $line = fgets($file);
                 $address = explode(" ", trim($line));
-                $this->add($i, $address[0],$address[1],$address[2]);
+                if(count($address) == 3) {
+                    $this->add($i, $address[0], $address[1], $address[2]);
+                }
+                elseif(count($address) == 4){
+                    $this->add($i, $address[0] . ' ' . $address[1], $address[2], $address[3]);
+                }
                 $i++;
             }
             fclose($file);
@@ -40,7 +45,7 @@ class TS {
     public function init_matrix(){
         $num_locations = count($this->locations);
         for ($i = 1; $i <= $num_locations; $i++) {
-            for ($j = 1; $j<= $num_locations; $j++) {
+            for ($j = 1; $j <= $num_locations; $j++) {
                 if($i == $j) {
                     $this->cost_matrix[$i][$j] = $this->infinity;
                 }else{

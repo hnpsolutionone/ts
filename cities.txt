@@ -3,16 +3,16 @@ Tokyo 35.40 139.45
 Vladivostok 43.8 131.54
 Dakar 14.40 -17.28
 Singapore 1.14 103.55
-San_Francisco 37.47 -122.26
+San Francisco 37.47 -122.26
 Auckland -36.52 174.45
 London 51.32 -0.5
 Reykjavík 64.4 -21.58
 Paris 48.86 2.34
 Prague 50.5 14.26
-New_York 40.47 -73.58
-New_Delhi 28.60 77.22
+New York 40.47 -73.58
+New Delhi 28.60 77.22
 Rio -22.57 -43.12
-Mexico_City 19.26 -99.7
+Mexico City 19.26 -99.7
 Lima -12 -77.2
 Moscow 55.45 37.36
 Cairo 30.2 31.21
