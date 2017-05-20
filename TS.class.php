@@ -41,10 +41,15 @@ class TS {
             while(!feof($file)) {
                 $line = fgets($file);
                 $address = explode(" ", trim($line));
-                if (count($address) == 3) {
-                    $this->add($i, $address[0], $address[1], $address[2]);
-                } elseif (count($address) == 4){
-                    $this->add($i, $address[0] . ' ' . $address[1], $address[2], $address[3]);
+                $count = count($address);
+                if ($count == 3) {
+                    $this->add($i, $address[$count-3], $address[$count-2], $address[$count-1]);
+                } elseif ($count > 3){
+                    $city_name = '';
+                    for ($j = 0; $j < $count - 2; $j++) {
+                        $city_name .= $address[$j] . ' ';
+                    }
+                    $this->add($i, $city_name, $address[$count-2], $address[$count-1]);
                 }
                 $i++;
             }
