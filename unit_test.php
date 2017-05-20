@@ -17,7 +17,7 @@ class TSTest extends PHPUnit_Framework_TestCase {
         $ts_test->add(3,'Vladivostok',43.8,131.54);
         $ts_test->initMatrix();
         // calculator begin with Beijing city.
-        $ts_test->compute(count($ts_test->locations), 1 ,$ts_test->cost_matrix);
+        $ts_test->compute(count($ts_test->locations), 1 , $ts_test->cost_matrix);
         $this->assertNotNull($ts_test->cost);
     }
 }

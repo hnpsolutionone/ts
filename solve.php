@@ -156,7 +156,7 @@ $ts->storeMatrix('cities.txt');
 // init the cost matrix moves between cities.
 $ts->initMatrix();
 // calculator to find shortest route base on Nearest neighbor algorithm and begin with Beijing (=1) city .
-$ts->compute(count($ts->locations), 1 ,$ts->cost_matrix);
+$ts->compute(count($ts->locations), 10 , $ts->cost_matrix);
 // print the result shortest distance and shortest route
 print '<strong>Shortest Distance</strong>: ' . $ts->cost;
 print '<br /><strong>Shortest Route</strong>: <br />';
