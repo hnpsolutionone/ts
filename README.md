@@ -12,6 +12,6 @@ Class TS is a calculator for the common "Travel SaleMan" base on Nearest Neighbo
 
 3. Performance testing with Gatling tool
 
-- I have run 10 requests to 50 requests. The results performance very good (under 1s/request). You can open two files below and review them:
+- I have ran performance testing from 10 requests and 50 requests with AdvancedMySkillsPerformanceSimulation.scala script. The results performance very good (under 1s/request). You can open two files below and review them:
 + \results\Performance Testing with Gatling\10 requests in duration 22 seconds\index.html
 + \results\Performance Testing with Gatling\50 requests in duration 102 seconds\index.html
