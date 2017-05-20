@@ -1,0 +1,10 @@
+{
+  "simulation": "myskillsperformance.AdvancedMySkillsPerformanceSimulation",
+  "simulationId": "8",
+  "start": 1495283628809,
+  "description": "",
+  "scenarios": ["TS"],
+  "assertions": [
+
+  ]
+}
