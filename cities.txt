@@ -19,7 +19,7 @@ Cairo 30.2 31.21
 Toronto 43.40 -79.24
 Santiago -12.56 -38.27
 Caracas 10.28 -67.2
-San_Jose 9.55 -84.02
+San Jose 9.55 -84.02
 Lusaka -15.25 28.16
 Casablanca 33.35 -7.39
 Astana 51.10 71.30
