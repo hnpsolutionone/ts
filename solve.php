@@ -11,7 +11,7 @@ try {
     $ts->initMatrix();
 
     // calculator to find shortest route base on Nearest neighbor algorithm and begin with Beijing (=1) city .
-    $ts->compute(count($ts->locations), 1 , $ts->cost_matrix);
+    $ts->compute(count($ts->locations), 1, $ts->cost_matrix);
 
     // print the result shortest distance and shortest route
     echo "\nShortest Distance: " . $ts->cost . "\n\n";
@@ -19,6 +19,6 @@ try {
     $ts->printRoute();
     echo "\n\n";
 } catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    echo 'Caught exception: ', $e->getMessage(), "\n";
 }
 ?>
