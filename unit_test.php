@@ -7,7 +7,7 @@ require_once 'TS.class.php';
 class TSTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * @covers TSP::compute
+     * @covers TS::compute
      * @todo   Implement testTS().
      */
     public function testTS() {
