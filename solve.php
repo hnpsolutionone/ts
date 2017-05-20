@@ -17,12 +17,23 @@ class TS {
     public $cost = null;                // the distance route
     private $infinity = 10000;          // define the Infinity number
 
-	// add a location
+	/**
+     * Add a location
+     *
+     * @param int $i The position of city
+     * @param string $name The city name
+     * @param int $longitude The longitude of city
+     * @param int $latitude The latitude of city
+     */
     public function add($i,$name,$longitude,$latitude){
         $this->locations[$i] = array('name'=>$name,'longitude'=>$longitude,'latitude'=>$latitude);
     }
 
-    // stored information from file into $locations array
+    /**
+     * Stored information from file into locations array
+     *
+     * @param File $file_name A cities text
+     */
     public function store_matrix($file_name){
         if ($file = fopen($file_name, "r")) {
             $i = 1;
@@ -41,7 +52,9 @@ class TS {
         }
     }
 
-    // init the cost matrix moves between cities
+    /**
+     * Init the cost matrix moves between cities
+     */
     public function init_matrix(){
         $num_locations = count($this->locations);
         for ($i = 1; $i <= $num_locations; $i++) {
@@ -55,14 +68,22 @@ class TS {
         }
     }
 
-    // show the all cities which have visited
+    /**
+     * Show the all cities which have visited
+     */
     public function print_route(){
         foreach(end($this->visited) as $visit) {
             print $this->locations[$visit]['name'] . '<br />' ;
         }
     }
 
-    // calculator base on Nearest neighbor algorithm.
+    /**
+     * Calculator base on Nearest Neighbor Algorithm.
+     *
+     * @param int $n The total of cities
+     * @param int $v The start point of tour
+     * @param int $mt_cities The matrix include all cost between cities
+     */
     public function compute($n, $v, $mt_cities){
         for($i = 0; $i <= $n; $i++)
             $flag[$i]=0;
@@ -96,7 +117,14 @@ class TS {
         $this->cost = $cost;
     }
 
-	// work out the distance between 2 longitude and latitude pairs
+	/**
+     * Work out the distance between 2 longitude and latitude pairs
+     *
+     * @param int $lat1 The latitude of City 1
+     * @param int $lon1 The longitude of City 1
+     * @param int $lat2 The latitude of City 2
+     * @param int $lon2 The longitude of City 2
+     */
 	function distance($lat1, $lon1, $lat2, $lon2) {
 		if ($lat1 == $lat2 && $lon1 == $lon2) return 0;
 		$unit = 'M';	// miles please!
